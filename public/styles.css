@@ -1,0 +1,380 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Libre Franklin', sans-serif;
+}
+body{
+    background: #fff;
+}
+body::-webkit-scrollbar-thumb{
+    background: #e41f25;
+    border-radius: 15px;
+}
+body::-webkit-scrollbar{
+    width: 13px;
+}
+header{
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #e41f25;
+}
+header a{
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    background: #fff;
+    padding: 2px;
+    font-size: 20px;
+    color: #e41f25;
+    text-decoration: none;
+    margin-right: 30px;
+    font-weight: bold;
+}
+.container{
+    width: 100%;
+    height: 90vh;
+    background: url('/public/icons/backgroud.png');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.container p{
+    margin-top: 50px;
+    width: 450px;
+    color: #fff;
+    font-size: 30px;
+}
+.container p:nth-child(2){
+    text-align: right;
+}
+/*seção de pesquisa*/
+.container_search{
+    width: 100%;
+    height: 10vh;
+    padding: 0 5% 2%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+.title{
+    width: 100%;
+    text-align:left;
+    font-size: 35px;
+    color: #fff;
+}
+input{
+    width: 350px;
+    height: 40px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 20px;
+    border-style: none;
+    background: #f5a1c4;
+}
+input::placeholder{
+    color: #fff;
+}
+button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-style: none;
+    margin-left: 15px;
+    background: transparent;
+}
+button img{
+    cursor: pointer;
+    width: 45px;
+}
+button img:hover{
+    transform: scale(1.2);
+    transition: all .3s ease-in-out;
+}
+
+/*area principal*/
+.container_main{
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+#container_card{
+    width: 85%;
+    min-height: 830px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    background: rgba(204, 204, 204, 0.288);
+}
+
+/*lista dos tipos*/
+
+.list{
+    width: 220px;
+    min-height: 500px;
+    display: grid;
+    place-content: center;
+}
+.list h3{
+    position: absolute;
+}
+ul{
+    padding-top: 30px;
+}
+.list li{
+    list-style: none;
+    margin: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.list li:hover{
+    transform: scale(1.2);
+}
+/*conteudo do card*/
+.card_poke{
+    width: 280px;
+    min-height: 380px;
+    border-radius: 10px;
+    background: #d1cfcf63;
+    filter: blur(2px #000);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.card_poke:hover{
+    transform: translateY(-5px);
+    transition: all .2s ease;
+    box-shadow: 4px 4px 12px rgb(100, 99, 99);
+}
+.poke{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: .5px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:15px;
+}
+.description{
+    margin-top: 25px;
+}
+img{
+    width: 170px;
+}
+p{
+    margin-top: 10px;
+    font-size: 20px;
+    padding-left: 5px;
+    border-radius: 4px;
+    
+}
+.description p:nth-child(2){
+    color: #fff;
+}
+h3{
+    height: 30px;
+    padding-left: 5px;
+    font-size: 25px;
+    width: 100%;
+}
+
+
+/*modal dos pokemons*/
+.modal_description{
+    width: 600px;
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 6px 6px 12px #000;
+    background: #fff;
+    position: absolute;
+    display: flex;
+    transform: translateY(-500px);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    left: 30%;
+    z-index: 1;
+}
+.img_modal{
+    width: 200px;
+    height: 400px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-right: 0.5px solid #2b2929ce;
+}
+.img_modal h3{
+    width: 100px;
+    text-align: left;
+    margin-bottom: 15px;
+}
+.img_modal img{
+    width: 240px;
+    position: relative;
+    left: 70px;
+}
+.modal_info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal_info p{
+    text-align: left;
+    width: 200px;
+    margin: 10px;
+}
+.modal_description button{
+    font-size: 25px;
+    background: #e41f25;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2%;
+    cursor: pointer;
+}
+
+/*footer*/
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+a img{
+    position: fixed;
+    top: 80%;
+    right: 0;
+    width: 70px;
+    transform: rotate(180deg);
+}
+
+/*cores abilidades*/
+.steel {
+	background-color: #ab55f1de;
+}
+
+.fire {
+	background-color: #f05121;
+}
+
+.grass {
+	background-color: #3fbd04cc;
+}
+
+.electric {
+	background-color: #f1cc12;
+}
+
+.water{
+    background: #2121f0d2;
+}
+.ice {
+	background-color: #32b1ebd2;
+}
+
+.ground {
+	background-color: #72502d;
+}
+
+.rock {
+	background-color: #61615f;
+}
+
+.fairy {
+	background-color: #c961db;
+}
+
+.poison {
+	background-color: #2a5733;
+}
+
+.bug {
+	background-color: #125821c5;
+}
+
+.dragon {
+	background-color: #e92222;
+}
+
+.psychic {
+	background-color: #f6ff00c0;
+}
+
+.flying {
+	background-color: #2bf5f5e1;
+}
+
+.fighting {
+	background-color: #775001e1;
+}
+
+.normal {
+	background-color: #9e9c9c;
+}
+
+.dark{
+    background-color: #000;
+}
+.ghost{
+    background: #e98282;
+}
+/*animaçoes*/
+.animation{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 80vh;   
+}
+.animation img:nth-child(1){
+    width: 450px;
+    position: absolute;
+    left: 32.9%;
+    opacity: 1;
+    animation: visible 5s 8s infinite alternate;
+}
+.animation img:nth-child(2){
+    width: 450px;
+    position: absolute;
+    left: 32.9%;
+    opacity: 0;
+    animation: visible 5s 4s infinite alternate;
+}
+
+@keyframes visible{
+    0%{opacity: 0;}
+    50%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.anima_modal{
+    opacity: 1;
+    transform: translateY(0);
+    transition: .5s all ease-in-out;
+}
+
+

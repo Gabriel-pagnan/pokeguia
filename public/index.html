@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100&display=swap" rel="stylesheet">
+    <title>Pokeguia</title>
+</head>
+
+<body>
+    <header>
+        <p class="title">PokéGuia</p>
+         <a href="#search">Buscar</a>
+        </header>
+        
+    <section class="container">
+        <p>Guia rápido de seus pokémons favoritos.</p>
+        <p>Busque por nome, número ou pelo tipo.</p>
+    </section> 
+    <section class="container_search">
+        <input type="text" id="search" placeholder="Busque um pokémon">
+        <button class="btnSearch" title="Pesquisar">
+            <img src="/public/icons/search.png">
+        </button>
+    </section>
+    
+    <main class="container_main">
+        <div id="modal" class="modal_description">
+            <div class="img_modal">
+                <h3 id="num"></h3>
+                <img id="img" src="" alt="">
+            </div>
+            <div class="modal_info">
+                <p id="hp"></p>
+                <p id= "ataque"></p>
+                <p id="defesa"></p>
+                <p id="speed"></p>
+            </div>
+            <button class="btn_close">X</button> 
+        </div>
+        <section class="list">
+            <h3>Busque por tipo</h3>
+            <ul id="ul"></ul>
+        </section>
+        <section id="container_card">
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Gabriel Vinicius Pagnan 2022</p>
+    </footer>
+    <a href="#modal" title="Ver card"><img src="icons/top.png" alt=""></a>
+
+    <script src="/src/js/lateral.js"></script>
+    <script src="/src/js/main.js"></script>
+</body>
+
+</html>
