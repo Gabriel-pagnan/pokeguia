@@ -40,7 +40,7 @@ function card() {
                 <div class="description">
                 <p class="${jsonDate.name}">Nome: ${jsonDate.name}</p>
                     <p class="${types[0]}" >Tipo: ${type()} </p>
-                    <p>Abilidade: ${ability()} </p>                    
+                    <p>Habilidade: ${ability()} </p>                    
                 </div>
                 </div>
             `;

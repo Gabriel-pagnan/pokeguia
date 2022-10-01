@@ -57,7 +57,7 @@ const list = ()=>{
                                     <div class="description">
                                     <p class="${newJson.name}">Nome: ${newJson.name}</p>
                                         <p class="${types[0]}" >Tipo: ${type()} </p>
-                                        <p>Abilidade: ${ability()} </p>                    
+                                        <p>Habilidade: ${ability()} </p>                    
                                     </div>
                                     </div>
                                 `;
